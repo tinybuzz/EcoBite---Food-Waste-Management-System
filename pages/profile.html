@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBite - Profile</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="profile-page">
+    <header>
+        <h1><a href="/pages/dashboard.html" class="brand-link">EcoBite</a></h1>
+        <nav>
+            <a href="/pages/index.html">Home</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/faq.html">FAQ</a>
+            <a href="/pages/profile.html" class="active">Profile</a>
+        </nav>
+    </header>
+
+    
+    <main id="form-section">
+        <section id="auth-selection">
+            <h2>User Authentication</h2>
+            <button onclick="showLogin()"><span style="margin-right: 8px;">🔑</span> Sign In</button>
+            <button onclick="showSignup()"><span style="margin-right: 8px;">📝</span> Sign Up</button>        
+        </section>
+
+       
+        <section id="login-container" class="auth-form hidden">
+            <h3>Login</h3>
+            <form id="login-form">
+                <label>Email:</label>
+                <input type="email" id="login-email" required>
+                
+                <label>Password:</label>
+                <input type="password" id="login-password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </section>
+
+    
+        <section id="signup-container" class="auth-form hidden">
+            <h3>Sign Up</h3>
+            <form id="signup-form">
+                <label>Name:</label>
+                <input type="text" id="signup-name" required>
+                
+                <label>Email:</label>
+                <input type="email" id="signup-email" required>
+                
+                <label>Password:</label>
+                <input type="password" id="signup-password" required>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Sign In</a></p>
+        </section>
+    </main>
+
+    
+    <section id="profile-section" class="hidden">
+        <h2>Welcome, <span id="user-name"></span></h2>
+        <p>Email: <span id="user-email"></span></p>
+        <h2>Donation Details</h2>
+
+        <form id="donation-form">
+            <label>Food Name:</label>
+            <input type="text" id="food-name" required>
+
+            <div class="meal-type-container">
+                <label><input type="radio" name="meal-type" value="Veg"> Veg</label>
+                <label><input type="radio" name="meal-type" value="Non-Veg"> Non-Veg</label>
+            </div>
+
+            <label>Food Category:</label>
+            <select id="food-category">
+                <option value="Raw Food">Raw Food</option>
+                <option value="Cooked Food">Cooked Food</option>
+                <option value="Packed Food">Packed Food</option>
+            </select>
+
+            <label>Quantity (per person):</label>
+            <input type="number" id="quantity" required>
+
+            <label>Email:</label>
+            <input type="email" id="donor-email" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label>District:</label>
+            <select id="district">
+                <option value="Surat">Surat</option>
+                <option value="Baroda">Baroda</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+            </select>
+
+            <label>Address:</label>
+            <input type="text" id="address" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Food Waste Management | Contact: <a href="mailto:info@foodwastemgmt.com">info@foodwastemgmt.com</a></p>
+    </footer>
+
+    <script src="/assets/js/auth.js"></script>
+</body>
+</html>

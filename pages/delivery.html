@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobite - Track Deliveries</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userName = localStorage.getItem('userName') || 'Guest';
+            document.getElementById('user-name').textContent = userName;
+            
+            let statusContainer = document.getElementById('status-container');
+            let isTrackingAvailable = false; 
+            
+            if (isTrackingAvailable) {
+                statusContainer.innerHTML = `<p>Your delivery details will be updated in real time.</p>`;
+            } else {
+                statusContainer.innerHTML = `<p>Tracking is currently unavailable as our website has not been deployed yet.</p>
+                                             <p>Stay tuned! Once we launch, you’ll be able to track your food donations in real time.</p>`;
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        h1 {
+            color: #28a745;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .section-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            min-width: 45%;
+            margin: 10px;
+        }
+        .info-box {
+            background: #e9f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .notify-btn, .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .tips-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .tips-list li {
+            background: #e9f5e9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Track Your Deliveries</h1>
+    
+    <div class="container">
+       
+        <div class="section-box">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <div id="status-container" class="info-box"></div>
+            <button class="notify-btn" onclick="alert('We will notify you when tracking is live!')">Get Notified</button>
+        </div>
+
+        <div class="section-box">
+            <h2>Food Delivery Safety Tips</h2>
+            <ul class="tips-list">
+                <li>✅ Ensure food is properly packed to maintain freshness.</li>
+                <li>🚗 Use insulated bags for hot and cold food separation.</li>
+                <li>🛵 Follow traffic safety rules while delivering food.</li>
+                <li>📍 Always confirm the recipient's details before handing over the food.</li>
+                <li>📢 Notify the recipient when the food is about to arrive.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <a href="/pages/index.html" class="back-btn">Back to Home</a>
+</body>
+</html>

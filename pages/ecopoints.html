@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBite - Sustainability Hub</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+             max-width: 900px; 
+             margin: auto;
+             background: white;
+             padding: 30px; 
+             border-radius: 15px; 
+             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        h2 {
+            color: #28a745;
+        }
+        .btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 22px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 12px auto; 
+    display: block; 
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #1e7e34;
+    transform: scale(1.05);
+}
+
+    
+        .goal-box, .challenge-box, .fact-box, .pledge-box, .quiz-box {
+            background: #dff0d8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🌱 Welcome to Your EcoBite Dashboard!</h2>
+
+        <div class="goal-box">
+            <h3>🏅 Eco Goals Tracker</h3>
+            <p id="goal">Set a goal to reduce food waste this week!</p>
+            <button class="btn" onclick="setGoal()">Set Goal</button>
+        </div>
+
+        <div class="challenge-box">
+            <h3>🔥 Daily Challenge</h3>
+            <p id="challenge">Click the button to get a challenge!</p>
+            <button class="btn" onclick="generateChallenge()">Get Challenge</button>
+        </div>
+
+        
+        <div class="fact-box">
+            <h3>📢 Live Sustainability Fact</h3>
+            <p id="ecoFact">Loading...</p>
+        </div>
+
+     
+        <div class="pledge-box">
+            <h3>🤝 Green Pledge Wall</h3>
+            <p>Take a pledge to reduce food waste!</p>
+            <input type="text" id="pledgeInput" placeholder="I pledge to...">
+            <button class="btn" onclick="addPledge()">Pledge</button>
+            <ul id="pledgeList"></ul>
+        </div>
+
+        
+        <div class="quiz-box">
+            <h3>🧠 Eco Quiz</h3>
+            <p id="quizQuestion">Click to start the quiz!</p>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        
+        function setGoal() {
+            let goal = prompt("Enter your weekly eco goal:");
+            if (goal) {
+                document.getElementById("goal").textContent = "✅ Goal: " + goal;
+            }
+        }
+
+       
+        function generateChallenge() {
+            const challenges = [
+                "Cook a meal using only leftovers!",
+                "Donate unused food to a local shelter!",
+                "Start composting your food scraps!",
+                "Plan your meals for the week to reduce waste!",
+                "Use a smaller plate to avoid wasting food!"
+            ];
+            let randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            document.getElementById("challenge").textContent = "🔹 Challenge: " + randomChallenge;
+        }
+
+       
+        const facts = [
+            "🌍 One-third of all food produced is wasted!",
+            "🍏 25% of the world's fresh water is used to produce wasted food!",
+            "💰 Reducing food waste can save families up to $1,500 per year!",
+            "🔥 Food waste is responsible for 8% of global greenhouse gas emissions!"
+        ];
+        function updateFact() {
+            let randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("ecoFact").textContent = randomFact;
+        }
+        setInterval(updateFact, 5000);
+        updateFact();
+
+        
+        function addPledge() {
+            let pledge = document.getElementById("pledgeInput").value;
+            if (pledge) {
+                let li = document.createElement("li");
+                li.textContent = "🌿 " + pledge;
+                document.getElementById("pledgeList").appendChild(li);
+                document.getElementById("pledgeInput").value = "";
+            }
+        }
+
+    
+        const quizQuestions = [
+            { question: "What percentage of food is wasted globally?", answer: "33%" },
+            { question: "What is the best way to store fruits to prevent waste?", answer: "Keep them in a cool, dry place" },
+            { question: "Which food item has the longest shelf life?", answer: "Honey" }
+        ];
+        function startQuiz() {
+            let randomQuiz = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+            let userAnswer = prompt(randomQuiz.question);
+            if (userAnswer && userAnswer.toLowerCase() === randomQuiz.answer.toLowerCase()) {
+                alert("✅ Correct!");
+            } else {
+                alert("❌ Incorrect! The correct answer is: " + randomQuiz.answer);
+            }
+        }
+    </script>
+
+</body>
+</html>

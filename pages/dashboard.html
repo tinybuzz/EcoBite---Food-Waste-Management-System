@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBite - Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            height: 80vh;
+            background: url("/assets/images/food_wastage.jpeg") no-repeat center center/cover;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .track-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .track-btn:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EcoBite</h1>
+        <nav>
+            <a href="/pages/index.html">Home</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html">Contact Us</a>
+            <a href="/pages/faq.html">FAQ</a>
+            <a href="/pages/profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Track and Manage Food Waste</h2>
+            <p>Analyze waste trends and optimize disposal methods.</p>
+            <a href="/pages/ecopoints.html" class="track-btn">Eco Mission</a>
+            
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Waste Management Solutions</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="/assets/images/food_waste_tracking_system.jpeg" alt="Waste Tracking">
+                <h3>Track Waste</h3>
+                <p>Record and monitor food waste.</p>
+            </div>
+            <div class="service-box">
+                <img src="/assets/images/reduce_food_waste_tips.jpeg" alt="Waste Reduction">
+                <h3>Reduce Waste</h3>
+                <p>Learn tips to minimize waste generation.</p>
+            </div>
+            <div class="service-box">
+                <img src="/assets/images/food_waste_recycling_process.jpeg" alt="Recycling">
+                <h3>Recycling</h3>
+                <p>Identify sustainable waste disposal options.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Food Waste Management | Contact: <a href="mailto:info@foodwastemgmt.com">info@foodwastemgmt.com</a></p>
+    </footer>
+
+</body>
+</html>

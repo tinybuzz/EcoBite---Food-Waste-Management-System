@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EcoBite - FAQ</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="faq-page">
+    <header>
+        <h1><a href="/pages/dashboard.html" class="brand-link">EcoBite</a></h1>
+        <nav>
+            <a href="/pages/index.html">Home</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/faq.html" class="active">FAQ</a>
+            <a href="/pages/profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="faq">
+        <div class="faq-heading">
+            <h2>Any Questions?</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">➕ What is EcoBite?</button>
+                <div class="faq-answer">EcoBite is a food waste management platform that connects food donors with those in need, helping reduce hunger and minimize food wastage.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ How does EcoBite work?</button>
+                <div class="faq-answer">Users can sign up, fill in a donation form with details about leftover or surplus food, and EcoBite helps coordinate delivery or collection with verified partners.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ Is EcoBite free to use?</button>
+                <div class="faq-answer">Yes! EcoBite is completely free for both donors and recipients. Our goal is to promote sustainability and reduce food waste, not make a profit.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ Who can donate food?</button>
+                <div class="faq-answer">Anyone! Whether you're a household, a restaurant, or a corporate cafeteria, you can donate safe-to-consume surplus food using our simple donation form.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ What kind of food can I donate?</button>
+                <div class="faq-answer">You can donate raw, cooked, or packed food as long as it's safe to eat and hasn’t passed its expiry time. We request users to ensure hygiene and proper storage before donation.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ How do I know my donation is delivered?</button>
+                <div class="faq-answer">Once your food is scheduled for pickup or delivery, our system will update the status via email or SMS. You’ll also receive confirmation once it’s successfully handed over.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ Can I track previous donations?</button>
+                <div class="faq-answer">Yes, registered users can view their donation history and details in the user dashboard once logged in.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ How can I volunteer with EcoBite?</button>
+                <div class="faq-answer">We're always looking for enthusiastic volunteers! Reach out via the Contact page, and we’ll get in touch with ways you can help with deliveries, campaigns, or logistics.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ How is food safety ensured?</button>
+                <div class="faq-answer">We encourage donors to only share freshly prepared or properly stored food. Additionally, our team/partners inspect donations before redistribution to ensure quality.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">➕ I still have more questions. What should I do?</button>
+                <div class="faq-answer">No problem! Just visit our Contact page and send us your query — we’re happy to help.</div>
+            </div>            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Food Waste Management | Contact: <a href="mailto:info@foodwastemgmt.com">info@foodwastemgmt.com</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll(".faq-question");
+    
+            questions.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const answer = btn.nextElementSibling;
+    
+                   
+                    answer.classList.toggle("show");
+    
+                   
+                    btn.classList.toggle("active");
+                });
+            });
+        });
+    </script>    
+</body>
+</html>

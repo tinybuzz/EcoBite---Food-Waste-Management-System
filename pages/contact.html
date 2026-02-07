@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBite - Contact</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    
+    <header>
+        <h1><a href="/pages/dashboard.html" class="brand-link">EcoBite</a></h1>
+        <nav>
+            <a href="/pages/index.html">Home</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html" class="active">Contact</a>
+            <a href="/pages/faq.html">FAQ</a>
+            <a href="/pages/profile.html">Profile</a>
+        </nav>
+    </header>
+
+    
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-content">
+          
+            <div class="contact-image">
+                <img src="/assets/images/contact_us.webp" alt="Contact Support">
+            </div>
+
+            
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>        
+
+    
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <p>Dedicated professionals committed to reducing food waste and supporting communities.</p>
+
+        <div class="team-container">
+            <div class="team-member">
+                <img src="/assets/images/team1.jpg" alt="Team Member 1">
+                <h3>Krisha Patel</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="/assets/images/team2.jpg" alt="Team Member 2">
+                <h3>Khushi Patel</h3>
+                <p>Operations Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="/assets/images/team3.jpg" alt="Team Member 3">
+                <h3>Lisa Patel</h3>
+                <p>Technology Lead</p>
+            </div>
+            <div class="team-member">
+                <img src="/assets/images/team4.jpg" alt="Team Member 4">
+                <h3>Maitri Patel</h3>
+                <p>Community Outreach</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="chatbot-section">
+        <center><h3>Chatbot Support</h3></center>
+        <div class="chat-container">
+            <textarea id="chat-box" placeholder="Ask about food waste management..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+     <center>
+    <h3>Frequently Asked Questions</h3>
+    <details>
+        <summary>How do I track my food waste?</summary>
+        <p>Log in to your account and enter your daily or weekly waste data.</p>
+    </details>
+    <details>
+        <summary>What disposal methods are recommended?</summary>
+        <p>We recommend composting, recycling, and responsible landfill management.</p>
+    </details>
+</center>
+
+   
+    <footer>
+        <p>&copy; 2025 Food Waste Management | Contact: <a href="mailto:info@foodwastemgmt.com">info@foodwastemgmt.com</a></p>
+    </footer>
+
+    
+    <script src="/assets/js/chatbot.js"></script>
+
+
+    
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Thank you for reaching out! We will get back to you soon.');
+        });
+    </script>
+
+</body>
+</html>
